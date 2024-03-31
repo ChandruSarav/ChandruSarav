@@ -1,3 +1,16 @@
+import java.util.Scanner;
+
+class NumberNames {
+
+public static void main(String[] args) {
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("Enter the number: ");
+
+int number = scanner.nextInt();
+
+scanner.close();
 if (number < 0) {
 System.out.println("Invalid number");
 return;
