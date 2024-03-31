@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+class NumberPlay {
+
+public static void main(String[] args) {
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("Enter the number: ");
+
+int number = scanner.nextInt();
+
+scanner.close();
+
+if (number < 10 || number > 99) {
+
+System.out.println("Invalid number");
+
+return;
+
+}
+
+if (number > 50) {
+
+printDifferenceOfDigits(number);
+
+} else {
+
+printDifferenceOfReversedDigits(number);
+
+}
+
+}
+
+private static void printDifferenceOfDigits(int number) {
+int firstDigit = number / 10;
+
+int secondDigit = number % 10;
+
+System.out.println(firstDigit - secondDigit);
+
+}
+
+private static void printDifferenceOfReversedDigits(int number) {
+
+int reversedNumber = secondDigitOfNumber(number) * 10 +
+
+firstDigitOfNumber(number);
+
+System.out.println(firstDigitOfNumber(reversedNumber) -
+
+secondDigitOfNumber(reversedNumber));
+
+}
+
+private static int firstDigitOfNumber(int number) {
+
+return number / 10;
+
+}
+
+private static int secondDigitOfNumber(int number) {
+
+return number % 10;
+
+}
+
+}
